@@ -1,4 +1,11 @@
-a = 0
-for i in range(1,11):
-    a += 1
-print(a)
+import numpy as np
+
+# naive implementation
+np.random.seed(0)
+rewards = []
+
+for n in range(1, 11):
+    reward = np.random.rand()
+    rewards.append(reward)
+    Q = sum(rewards) / n
+    print(Q)
